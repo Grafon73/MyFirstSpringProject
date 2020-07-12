@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+        <title>Edit</title>
+</head>
+<body>
+<form th:action="@{/edit}" th:object="${film}" method="post">
+    <input type="hidden" th:field="*{id}">
+    <label>Title</label>
+    <input type="text" th:field="*{title}">
+    <label>Year</label>
+    <input type="text" th:field="*{year}">
+    <label>Genre</label>
+    <input type="text" th:field="*{genre}">
+    <label>Watched</label>
+    <input type="text" th:field="*{watched}">
+    <input type="submit" value="Edit film">
+</form>
+</body>
+</html>
